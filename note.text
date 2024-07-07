@@ -14,9 +14,9 @@ insert into auth_user_user_roles values (1,1);
 MySQL
 1671333978734
 
-insert into auth_user(id, username, password, status, is_active, user_type,created_time_stamp, user_profile_id) values (1, 'system', '88e2d8cd1e92fd5544c8621508cd706b', 1, true, 0,1671333978734, 1);
-INSERT INTO user_profile(
-	id, status,first_name, last_name, profile_type,created_time_stamp)
-	VALUES (1, 1, 'system', 'system', 0, 1671333978734);
-insert into user_role(id, status,description,name,path,method,created_time_stamp) values (1,1, 'all', 'all', '/api','all',1671333978734);
-insert into auth_user_user_roles values (1,1);
+INSERT INTO nspace2.user_profile(
+	id, status,first_name, last_name, email, profile_type,created_time_stamp)
+	VALUES (1, 1, 'system', 'system', 'admin@hotmail.com', 0, 1671333978734);
+insert into nspace2.auth_user(id, username, password, status, is_active, user_type,created_time_stamp, user_profile_id) values (1, 'system', '88e2d8cd1e92fd5544c8621508cd706b', 1, true, 0,1671333978734, 1);
+insert into nspace2.user_role(id, status,description,name,path,method,created_time_stamp) values (1,1, 'all', 'all', '/api','all',1671333978734);
+insert into nspace2.auth_user_user_roles values (1,1);
