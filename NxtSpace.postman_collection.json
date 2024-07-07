@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "fad5c394-ebad-4f9b-950a-a02fed312801",
+		"name": "NxtSpace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[Auth] Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"system\",\n    \"password\" : \"passowrd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authentication/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Auth] Map Roles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[90]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Auth] New User Roles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roles\": [\n        {\n            \"name\": \"\",\n            \"path\": \"/api/v1/users\",\n            \"method\": \"GET\",\n            \"description\": \"\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Std] New Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"studentId\": \"ABC2\",\n    \"firstName\": \"Chathura\",\n    \"lastName\": \"Jayashantha\",\n    \"address\" : \"minuwangoda\",\n    \"contactNo\" : \"0987654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Std] Student By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/students/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Std] Students All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "{{authorization-header}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs] New Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"course\": {\n        \"courseId\": \"IT2205\",\n        \"name\": \"IT2205 - Introdiction to IT\",\n        \"duration\": \"48\"\n    },\n    \"paymentSchema\": {\n        \"name\" : \"pay - IT2205\",\n        \"courseFee\": 2500,\n        \"tax\": 0.0,\n        \"serviceCharges\": 0.0,\n        \"totalCourseFee\": 2500,\n        \"discountOnFullPayment\" : \"200\",\n        \"courseInstallments\": [\n            {\n                \"amount\": 2500,\n                \"installmentOrder\": 1\n            }\n        ],\n        \"deductions\": null\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs] Course by Course id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses/course-id/IT2203",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"course-id",
+						"IT2203"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs] Course by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs] Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\" : 25,\n    \"courseId\": \"IT2203\",\n    \"name\": \"IT2203 - Introdiction to IT 2\",\n    \"duration\": \"48\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs][PSc] Get Payment Schema By Id ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses/payment-schema/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"payment-schema",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs][PSc] New Payment Schema ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"courseFee\": 2500,\n    \"tax\": 0.0,\n    \"serviceCharges\": 0.0,\n    \"totalCourseFee\": 2500,\n    \"courseInstallments\": [\n        {\n            \"amount\" : 2500,\n            \"installmentOrder\" : 1\n        }\n    ],\n    \"deductions\": null\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses/payment-schema",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"payment-schema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs] Course details by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses/35/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"35",
+						"details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[Crs] Add Course Payment Schema ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1c2VySUQiOjEsInJvbGUiOiJVU0VSIiwidXNlck5hbWUiOiJzeXN0ZW0ifQ.yyMgsp3UxW9rEGMezgt0rK7BznGcUtoalDFZFY9MpkNZrXM0ghOp5TAv9IoHWlVEBKQjeTkIXjbWD128-8Zdxw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/courses/35/payment-schema/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"courses",
+						"35",
+						"payment-schema",
+						"30"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
